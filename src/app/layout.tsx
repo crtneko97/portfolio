@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar/Navbar";  // Adjust the import path as needed
 
 const inter = Inter({ subsets: ["latin"] });
 
 // This is the title at the top tab and then description
 export const metadata: Metadata = {
   title: "Simon | Personal Portfolio",
-  description: "Simon is a Java full-stackdeveloper",
+  description: "Simon is a Java full-stack developer",
 };
 
 export default function RootLayout({
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        <div className="content">{children}</div>
+      </body>
     </html>
   );
 }
