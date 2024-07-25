@@ -6,6 +6,7 @@
     border-radius: 10px;
     max-width: 1000px; /* Adjust as needed */
     margin: auto; /* Center the container */
+    margin-top: 4rem;
   }
   
   .introductionContainer {

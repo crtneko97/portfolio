@@ -16,7 +16,10 @@ const Navbar = () => {
         <div className={styles.logo}>
           <Link href="/">Simon Kern</Link>
         </div>
-        <div className={styles.hamburger} onClick={toggleMenu}>
+        <div
+          className={`${styles.hamburger} ${isOpen ? styles.open : ''}`}
+          onClick={toggleMenu}
+        >
           <div className={styles.bar}></div>
           <div className={styles.bar}></div>
           <div className={styles.bar}></div>
@@ -24,9 +27,6 @@ const Navbar = () => {
         <ul className={`${styles.navLinks} ${isOpen ? styles.showMenu : ''}`}>
           <li>
             <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
           </li>
           <li>
             <Link href="/projects">Projects</Link>
