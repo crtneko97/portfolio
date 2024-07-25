@@ -1,6 +1,7 @@
 export interface AboutMeProps {
     name: string;
     location: string;
-    role: string;
+    github: string;
+    linkedin: string;
   }
   
