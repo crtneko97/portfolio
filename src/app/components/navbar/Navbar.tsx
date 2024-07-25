@@ -10,11 +10,15 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">Simon Kern</Link>
+          <Link href="/" onClick={closeMenu}>Simon Kern</Link>
         </div>
         <div
           className={`${styles.hamburger} ${isOpen ? styles.open : ''}`}
@@ -26,13 +30,13 @@ const Navbar = () => {
         </div>
         <ul className={`${styles.navLinks} ${isOpen ? styles.showMenu : ''}`}>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" onClick={closeMenu}>Home</Link>
           </li>
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects" onClick={closeMenu}>Projects</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" onClick={closeMenu}>Contact</Link>
           </li>
         </ul>
       </div>
