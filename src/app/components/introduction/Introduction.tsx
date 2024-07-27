@@ -2,9 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Introduction.module.css';
 import profileImage from './git.jpg';
-import { AboutMeProps } from './aboutme'; // Correct path without '.ts'
+import { AboutMeProps } from './aboutme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub as faGithubBrand, faLinkedin as faLinkedinBrand } from '@fortawesome/free-brands-svg-icons';
 
 const Introduction: React.FC<AboutMeProps> = ({ name, location, github, linkedin }) => {
@@ -17,14 +16,14 @@ const Introduction: React.FC<AboutMeProps> = ({ name, location, github, linkedin
           <p className={styles.location}>
             {location}
           </p>
+          <div className={styles.socialmedialinks}>
           <a className={styles.github} href={github} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faGithubBrand} className={styles.icon} />
-            GitHub
+            <FontAwesomeIcon icon={faGithubBrand}/>
           </a>
           <a className={styles.linkedin} href={linkedin} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLinkedinBrand} className={styles.icon} />
-            LinkedIn
+            <FontAwesomeIcon icon={faLinkedinBrand}/>
           </a>
+          </div>
         </div>
       </div>
       <div className={styles.breadcrumbContent}>
