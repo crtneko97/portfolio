@@ -28,7 +28,7 @@ const Introduction: React.FC<AboutMeProps> = ({ name, location, github, linkedin
         </div>
       </div>
       <div className={styles.breadcrumbContent}>
-        <p className={styles.breadcrumb}>Home About Me</p>
+        <p className={styles.breadcrumb}>Hello! My name is Simon, and im a Java Full-stack Graduate. I finnished my 2year program at Stockholm tekniska institut June 2024.</p>
       </div>
     </div>
   );
