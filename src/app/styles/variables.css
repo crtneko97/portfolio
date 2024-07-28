@@ -1,0 +1,12 @@
+:root {
+    --primary-dark-bg: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+    
+    --primary-dark-card: rgba(0, 0, 0, 0.7);
+
+    --primary-light-text: rgb(211, 211, 211);
+
+    --primary-light-icon: rgba(190, 189, 189, 0.733);
+
+    --primary-light-border: rgb(255, 255, 255);
+
+}

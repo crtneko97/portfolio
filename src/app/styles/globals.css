@@ -1,3 +1,5 @@
+@import './variables.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+  background: var(--primary-dark-bg);
   display: flex;
   justify-content: center;
   align-items: flex-start;
