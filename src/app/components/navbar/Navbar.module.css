@@ -63,15 +63,21 @@
 .navLinks li {
   opacity: 0;
   transform: translateY(-20px);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 /* Links inside navLinks */
 .navLinks li a {
-  color: #fff; /* Ensure the text color is white */
+  color: var(--primary-light-text); /* Ensure the text color matches the rest */
   text-decoration: none; /* Remove underline */
   display: block; /* Ensure the link occupies the full space of its parent li */
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
 }
+
+.navLinks li a:hover {
+  text-decoration: none; /* Remove underline */
+  transform: scale(1.1); /* Scale the element slightly */
+}
+
 
 .navLinks.showMenu li {
   opacity: 1;
@@ -129,45 +135,7 @@
 }
 
 
-/* Tablets and small desktops */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .navLinks {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0; /* Hidden by default */
-    transform: translateY(-20px); /* Hide initially */
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Smooth transition */
-    pointer-events: none; /* Prevent interaction when hidden */
-    justify-content: center; /* Center the menu items vertically */
-    align-items: center; /* Center the menu items horizontally */
-    height: 100vh; /* Full viewport height */
-  }
 
-  .navLinks.showMenu {
-    opacity: 1;
-    transform: translateY(0); /* Slide down */
-    pointer-events: auto; /* Allow interaction */
-  }
-
-  .navLinks li {
-    text-align: center; /* Center-align text within dropdown */
-    padding: 10px 0;
-    margin-right: 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .logo a {
-    font-size: 1.5em; /* Adjust the size of the logo */
-  }
-}
 
 /* Desktops and larger screens */
 @media (min-width: 1024px) {
