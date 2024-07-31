@@ -5,7 +5,7 @@
   padding: 20px;
   background: var(--primary-dark-card); /* Dimmed background */
   border-radius: 10px;
-  max-width: 1000px; /* Adjust as needed */
+  max-width: 500px; /* Adjust as needed */
   margin: auto; /* Center the container */
   margin-top: 4rem;
 }
@@ -22,7 +22,6 @@
 .profileImage {
   border-radius: 20%; /* Circular image */
   margin-right: 1rem; /* Space between image and text */
-  margin-bottom: 10%;
   border: 3px solid var(--primary-light-border); /* White border around the image */
 }
 
@@ -88,3 +87,21 @@
   font-size: 0.9em; /* Smaller font size for breadcrumb */
   color: var(--primary-light-text); /* Light color for breadcrumb */
 }
+
+
+@media (min-width: 1024px) {
+  .introductionContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if there are more items than can fit */
+    justify-content: space-between; /* Space items evenly */
+    gap: 20px; /* Space between items */
+  }
+
+  .introductionWrapper {
+    display: inline-block; /* Ensure items are displayed inline-block */
+    width: calc(50% - 20px); /* Adjust width based on the gap */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-right: 20px;
+  }
+}
+
