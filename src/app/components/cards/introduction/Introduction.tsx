@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Introduction.module.css';
 import profileImage from './git.jpg';
-import { AboutMeProps } from './aboutme';
+import { AboutMeProps } from '../../../interfaces/aboutme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub as faGithubBrand, faLinkedin as faLinkedinBrand } from '@fortawesome/free-brands-svg-icons';
 
