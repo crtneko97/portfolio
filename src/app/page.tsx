@@ -1,5 +1,7 @@
 import React from 'react'
 import Introduction from './components/introduction/Introduction';
+import "./styles/globals.css";
+
 
 
 const Home = () => {

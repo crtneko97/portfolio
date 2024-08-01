@@ -16,10 +16,17 @@ body {
   color: #fff;
 }
 
+
 .content {
   width: 90%; /* Adjust based on your preference */
   max-width: 1200px; /* Ensure content doesn't stretch too wide on large screens */
   padding-top: 60px; /* Adjust based on the navbar height */
 }
 
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+  }
+}
 
