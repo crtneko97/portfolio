@@ -7,7 +7,14 @@
   left: 0;
   z-index: 1000;
   margin-top: 1rem;
+  transition: top 0.3s ease; /* Add transition for smooth hiding/showing */
 }
+
+/* Class to hide the navbar when scrolling down */
+.hideNavbar {
+  top: -80px; /* Adjust this value based on the height of your navbar */
+}
+
 
 .container {
   display: flex;
