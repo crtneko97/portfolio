@@ -1,31 +1,52 @@
+/* Projects.module.css */
+
 .projectsWrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
-}
-
-.projectCard {
-    border: 1px solid #ddd;
+  }
+  
+  .projectCard {
     border-radius: 8px;
     padding: 20px;
-    max-width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.projectImage {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .projectImage {
     border-radius: 8px;
     margin-bottom: 15px;
-}
-
-.projectContent {
+  }
+  
+  .projectContent {
     text-align: left;
-}
-
-.projectContent h2 {
+  }
+  
+  .projectContent h2 {
     margin: 10px 0;
-}
-
-.projectContent p {
+  }
+  
+  .projectContent p {
     margin: 5px 0;
-}
+  }
+  
+  .githubLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .githubLink:hover {
+    background-color: #555;
+  }
+  

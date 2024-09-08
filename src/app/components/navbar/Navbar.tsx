@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import ResumeButton from '../downloadButton/DownloadButton';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
