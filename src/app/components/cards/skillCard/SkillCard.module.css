@@ -1,61 +1,102 @@
-/* SkillCard.module.css */
-
 .skillCardContainer {
-    width: 100%;
-    max-width: 400px; /* Adjust the max width as needed */
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 20px auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+  width: 100%;
+  max-width: 400px; /* Adjust the max width as needed */
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+  transition: transform 0.3s ease, max-height 0.3s ease;
+  position: relative; /* Relative position to overlay */
+  z-index: 10; /* Ensure the card is above the overlay */
+}
 
-    transition: max-height 0.3s ease;
+.skillCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  background-color: transparent; /* Adjust color */
+  color: white;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+.skillList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+  transition: max-height 0.3s ease;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0; /* Hidden by default for animation */
+  transform: translateY(-20px); /* Initial position for the animation */
+  animation: fallIn 0.5s forwards;
+}
+
+.skillItem:last-child {
+  border-bottom: none;
+}
+
+.skillIcon {
+  font-size: 24px; /* Adjust icon size */
+  margin-right: 10px;
+}
+
+.skillName {
+  font-size: 16px;
+}
+
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .skillCardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    cursor: pointer;
-    background-color: transparent; /* Adjust color */
-    color: white;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .arrow {
-    font-size: 18px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5; /* Behind the skill card */
+}
+
+.open {
+  transform: scale(1.05); /* Slightly pop the card */
+}
+
+/* Desktop-specific styles */
+@media (min-width: 1024px) {
+  .skillCardContainer {
+    max-width: 500px; /* Adjust width for desktop view */
   }
   
   .skillList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
-    transition: max-height 0.3s ease;
+    max-height: 300px; /* Set a max-height to animate expansion */
+    overflow-y: auto;
   }
-  
-  .skillItem {
-    display: flex;
-    align-items: center;
-    padding: 10px 16px;
-    border-bottom: 1px solid #ddd;
+
+  .open .skillItem {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .skillItem:last-child {
-    border-bottom: none;
+
+  .open {
+    transform: scale(1.05); /* Slightly enlarge the card when open */
   }
-  
-  .skillIcon {
-    font-size: 24px; /* Adjust icon size */
-    margin-right: 10px;
-  }
-  
-  .skillName {
-    font-size: 16px;
-  }
-  
-  @media (max-width: 768px) {
-    .skillCardContainer {
-      max-width: 100%;
-    }
-  }
-  
+}

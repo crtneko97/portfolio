@@ -23,9 +23,15 @@ body {
   padding-top: 60px; /* Adjust based on the navbar height */
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+}
+
 
 @media (min-width: 1024px) {
-  main {
+
+  main{
     display: flex;
   }
 }

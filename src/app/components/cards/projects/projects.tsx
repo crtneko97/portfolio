@@ -17,7 +17,7 @@ const Projects: React.FC<ProjectsProps> = ({ project }) => {
               src={project.image}
               alt={project.title}
               className={styles.projectImage}
-              width={300}
+              width={250}
               height={250}
             />
           )}

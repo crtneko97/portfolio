@@ -31,6 +31,14 @@ const myProjects = [
     description: '',
     image: '/weather.png', // Replace with actual image path
   },
+  {
+    title: 'Weather api',
+    github: 'https://github.com/crtneko97/WebbservicesJ22SK/tree/master',
+    languages: ['Java', 'MYSQL'],
+    frameworks: ['MAVEN', 'SPRINGBOOT'],
+    description: '',
+    image: '/weather.png', // Replace with actual image path
+  },
   // Add more projects as needed
 ];
 
